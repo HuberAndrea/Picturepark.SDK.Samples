@@ -68,7 +68,14 @@
 
 
     <mat-sidenav-content>
-      <pp-content-browser class="content-browser" [query]="searchQuery" [channel]="channel" [filter]="filter" (previewItemChange)="previewItem($event)"></pp-content-browser>
+      <pp-content-browser 
+        class="content-browser"
+        #contentBrowser
+        [searchString]="searchQuery"
+        [channel]="channel"
+        [filter]="filter" 
+        (previewItemChange)="previewItem($event)">
+      </pp-content-browser>
     </mat-sidenav-content>
   </mat-sidenav-container>
 
